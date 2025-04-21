@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+fieldset {
+  border: none;
+  margin-bottom: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button[type="submit"] {
+  background-color: #198754;
   color: white;
+  margin-top: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+button[type="button"] {
+  background-color: #0d6efd;
+  color: white;
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  opacity: 0.9;
+}
+
+.camper-section {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #f1f3f5;
+  border-left: 4px solid #0d6efd;
+  border-radius: 6px;
+  position: relative;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #dc3545;
+  color: white;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.add-camper-btn {
+  background-color: #0d6efd;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.submit-btn {
+  background-color: #198754;
+  color: white;
 }

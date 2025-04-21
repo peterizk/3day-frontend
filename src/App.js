@@ -98,7 +98,7 @@ if (stripeData.url) {
   };
 
   return (
-    <div style={{ maxWidth: '700px', margin: '2rem auto', fontFamily: 'Arial' }}>
+    <div className="form-wrapper">
       <h1>Camper Registration Form</h1>
       <form onSubmit={handleSubmit}>
         <fieldset style={{ padding: '1rem', border: '1px solid #ccc' }}>
@@ -135,21 +135,22 @@ if (stripeData.url) {
 
         <br />
 
-        <fieldset style={{ padding: '1rem', border: '1px solid #ccc' }}>
+        <fieldset>
           <legend><strong>Camper Info</strong></legend>
 
           {campers.map((camper, index) => (
-            <div key={index} style={{ borderBottom: '1px dashed #ccc', marginBottom: '1rem', paddingBottom: '1rem' }}>
+            <div className="camper-section" key={index}>
               <h3>
                 Camper {index + 1} {index === 0 ? '(Required)' : ''}
                 {index > 0 && (
-                  <button
-                    type="button"
-                    style={{ marginLeft: '1rem', color: 'red', border: 'none', background: 'none', cursor: 'pointer' }}
-                    onClick={() => removeCamper(index)}
-                  >
-                    Remove
-                  </button>
+                 <button
+                 type="button"
+                 className="remove-btn"
+                 onClick={() => removeCamper(index)}
+               >
+                 Remove
+               </button>
+               
                 )}
               </h3>
 
@@ -202,11 +203,15 @@ if (stripeData.url) {
             </div>
           ))}
 
-          <button type="button" onClick={addCamper}>➕ Add Another Camper</button>
+          <button type="button" className="add-camper-btn" onClick={addCamper}>
+            ➕ Add Another Camper
+          </button>
         </fieldset>
 
         <br />
-        <button type="submit">Submit Form</button>
+        <button type="submit" className="submit-btn">
+        Submit Form
+        </button>
       </form>
     </div>
   );
