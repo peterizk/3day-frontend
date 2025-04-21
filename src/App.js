@@ -50,7 +50,7 @@ function App() {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/submit', {
+      const response = await fetch('https://threeday-backend.onrender.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -78,7 +78,7 @@ function App() {
 
 // After form is saved to database
 const camperCount = campers.length;
-const stripeSession = await fetch('http://localhost:5000/create-checkout-session', {
+const stripeSession = await fetch('https://threeday-backend.onrender.com/create-checkout-session', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ camperCount })
